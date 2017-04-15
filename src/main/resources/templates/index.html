@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charsset="UTF-8">
+    <title>nodeLightes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src = "resources/js/index.js"></script>
+    <script src = "resources/js/widgetTweet.js"></script>
+    <script id="twitter-wjs" type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+
+    <!---------sockets--------------------->
+
+    <!-- sockjs cdn -->
+    <script src = "resources/js/sockjs.js"></script>
+
+
+
+
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+    <script src="resources/js/lightStatus.js"></script>
+
+
+
+    <!-----------end of sockets----------------->
+
+
+
+
+    <link rel = "stylesheet" type = "text/css" href = "resources/css/index.css"> </link>
+
+    </head>
+
+<body onload = "getTime()">
+<audio controls autoplay loop>
+    <source src = "resources/media/jingle-bells-country.mp3" type = "audio/mp3"/>
+</audio>
+
+<h4 id = "timeShow">The date didnt work:(</h4>
+
+<p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+
+
+
+<br>
+
+<div class = "playInfo">
+<div id = "shower">
+
+    <h2>Come see the real thing</h2>
+    <br>
+    <!--<img src = "resources/images/lightShowGifFast.gif" alt = "Preview Show"/>-->
+    <div class = "parent">
+
+        <img class = "base" src = "resources/images/baseHouse.jpg" alt = "The House"/>
+        <img class = "lights" id = "pin12" src = "resources/images/leftLeftLights.png" alt = "left lights"/>
+        <img class = "lights" id = "pin3" src = "resources/images/leftRightLights.png" alt = "left lights"/>
+        <img class = "lights" id = "pin22" src = "resources/images/garageLights.png" alt = "left lights"/>
+        <img class = "lights" id = "pin13" src = "resources/images/rightBottomLights.png" alt = "left lights"/>
+        <img class = "lights" id = "pin7" src = "resources/images/rightTopLights.png" alt = "left lights"/>
+        <img class = "lights" id = "pin9" src = "resources/images/centerLights.png" alt = "left lights"/>
+        <img class = "lights" id = "pin8" src = "resources/images/treeLights.png" alt = "left lights"/>
+
+    </div>
+</div>
+</div>
+<div class = "keepOpen"></div>
+
+<div class = "playInfo">
+    <div id = "showTemp">
+        <div id = "respInfo">
+            <h2>What people are saying about Moore Lights</h2>
+            <div id = "keepDisplay">
+                <div id = "tweetShow" class = "animate-flicker"></div>
+            </div>
+            <br>
+            <div id = "servedRes">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class = "playInfo">
+    <br>
+    <div class = "showTemp">
+        <button type = "button" id = "14Button" class = "lightSelect" value = "14">Post 14</button>
+        <div id = "14Response" class = "stateShow">Current State = HIGH</div>
+    </div>
+    <br>
+
+
+
+    <!--
+        <button type = "button" id = "allOn" value = "turnAllOn">All <span class = "powerOn">ON</span></button>
+        <br>
+        <button type = "button" id = "allOff" value = "turnAllOff">All <span class = "powerOff">OFF</span></button>
+        <br>
+        <button type = "button" id = "clear" value = "ClearPlease">Clear Console</button>
+        <br>
+        <button type = "button" id = "getSocial" value = "socialPlease">Get Twit Stuff</button>
+        <br>
+    -->
+</div>
+
+
+
+</body>
+</html>

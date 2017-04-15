@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charsset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>nodeLightes</title>
+    <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src = "resources/js/twitterShow.js"></script>
+    <script src = "resources/js/widgetTweet.js"></script>
+    <script id="twitter-wjs" type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+
+    <link rel = "stylesheet" type = "text/css" href = "resources/css/index.css"> </link>
+
+</head>
+
+<body onload = "getTime()">
+
+<h4 id = "timeShow">The date didnt work:(</h4>
+
+<p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+
+
+
+<br>
+
+
+<div id = "shower">
+    <div id = "showTemp">
+        <div id = "respInfo">
+            <h2>What people are saying about Moore Lights</h2>
+            <div id = "keepDisplayLarge">
+                <div id = "tweetShow" class = "animate-flicker"></div>
+            </div>
+            <br>
+            <div id = "servedRes">
+            </div>
+        </div>
+</div>
+
+</div>
+
+
+
+
+</body>
+</html>

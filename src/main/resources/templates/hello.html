@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Hello World!</title>
+
+    <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src = "resources/js/index.js"></script>
+    <script src = "adminResources/js/adminJS.js"></script>
+    <script src = "resources/js/widgetTweet.js"></script>
+    <script id="twitter-wjs" type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link rel = "stylesheet" type = "text/css" href = "resources/css/index.css"> </link>
+
+
+</head>
+<body>
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" class = "buttons" value="Sign Out"/>
+</form>
+
+<button id = "getAllTweetBtn" class = "getSpecTweets" value = "0" onclick="getNextTweets(this.value)">See Available Tweets</button>
+<br>
+
+
+
+<div class = "row">
+
+    <div class = "col-xs-1 col-md-3"></div>
+    <div class = "col-xs-10 col-md-6">
+        <a href = "http://localhost/">Home Page</a>
+
+        <br>
+        <div id = "allTweetShow">
+
+
+
+
+        </div>
+        <div id = "totalTweets">
+
+        </div>
+        <div id = "whichIsThis">
+
+        </div>
+        <button id = "previous" class = "getSpecTweets" value = "0" onclick = "getNextTweets(this.value)">Previous</button>
+        <button id = "next" class = "getSpecTweets" value = "0" onclick = "getNextTweets(this.value)">Next</button>
+    </div>
+    <div class = "col-xs-1 col-md-3"></div>
+
+
+</div>
+
+</body>
+</html>
