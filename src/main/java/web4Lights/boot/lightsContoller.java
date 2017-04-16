@@ -27,192 +27,192 @@ public class lightsContoller {
 
 
 
-//    static GpioController gpio = GpioFactory.getInstance();
-//    private GpioPinDigitalInput pin03In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_03, PinPullResistance.PULL_DOWN);
-//    private GpioPinDigitalInput pin07In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_07, PinPullResistance.PULL_DOWN);
-//    private GpioPinDigitalInput pin08In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_08, PinPullResistance.PULL_DOWN);
-//    private GpioPinDigitalInput pin09In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_09, PinPullResistance.PULL_DOWN);
-//    private GpioPinDigitalInput pin12In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_12, PinPullResistance.PULL_DOWN);
-//    private GpioPinDigitalInput pin13In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_13, PinPullResistance.PULL_DOWN);
-////    private GpioPinDigitalInput pin14In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_14, PinPullResistance.PULL_DOWN);
-//    private GpioPinDigitalInput pin22In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_22, PinPullResistance.PULL_DOWN);
-//    //private gpioPins tryingPins = new gpioPins();
+    static GpioController gpio = GpioFactory.getInstance();
+    private GpioPinDigitalInput pin03In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_03, PinPullResistance.PULL_DOWN);
+    private GpioPinDigitalInput pin07In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_07, PinPullResistance.PULL_DOWN);
+    private GpioPinDigitalInput pin08In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_08, PinPullResistance.PULL_DOWN);
+    private GpioPinDigitalInput pin09In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_09, PinPullResistance.PULL_DOWN);
+    private GpioPinDigitalInput pin12In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_12, PinPullResistance.PULL_DOWN);
+    private GpioPinDigitalInput pin13In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_13, PinPullResistance.PULL_DOWN);
+//    private GpioPinDigitalInput pin14In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_14, PinPullResistance.PULL_DOWN);
+    private GpioPinDigitalInput pin22In = gpio.provisionDigitalInputPin(RaspiPin.GPIO_22, PinPullResistance.PULL_DOWN);
+    //private gpioPins tryingPins = new gpioPins();
 
 
 
-///*    private GpioPinDigitalOutput pin03;
-//    private GpioPinDigitalOutput pin07;
-//    private GpioPinDigitalOutput pin08;
-//    private GpioPinDigitalOutput pin09;
-//    private GpioPinDigitalOutput pin12;
-//    private GpioPinDigitalOutput pin13;
-//*/    private static GpioPinDigitalOutput pin14;
-////    private GpioPinDigitalOutput pin22;
+/*    private GpioPinDigitalOutput pin03;
+    private GpioPinDigitalOutput pin07;
+    private GpioPinDigitalOutput pin08;
+    private GpioPinDigitalOutput pin09;
+    private GpioPinDigitalOutput pin12;
+    private GpioPinDigitalOutput pin13;
+*/    private static GpioPinDigitalOutput pin14;
+//    private GpioPinDigitalOutput pin22;
 
 
 
 
-//    public lightsContoller()
-//    {
-//
-//
-//
-//        pin03In.setShutdownOptions(true);
-//        pin07In.setShutdownOptions(true);
-//        pin08In.setShutdownOptions(true);
-//        pin09In.setShutdownOptions(true);
-//        pin12In.setShutdownOptions(true);
-//        pin13In.setShutdownOptions(true);
-////        pin14In.setShutdownOptions(true);
-//        pin22In.setShutdownOptions(true);
-//
-//
-//
-//
-//        pin03In.addListener(new GpioPinListenerDigital() {
-//            @Override
-//            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event){
-//                if(event.getState().isHigh())
-//                {
-//                    System.out.println("pin 3 was listened to for relay 3 is HIGH");
-//                    sendMes("pin3", "HIGH");
-//                    //sendMes("pin 3 was listened to for relay 3 is HIGH");
-//                }
-//                else
-//                {
-//                    System.out.println("pin 3 was listened to for relay 3 is LOW");
-//                    sendMes("pin3", "LOW");
-//                    //sendMes("pin 3 was listened to for relay 3 is LOW");
-//                }
-//            }
-//        });
-//
-//        pin07In.addListener(new GpioPinListenerDigital() {
-//            @Override
-//            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-//                if(event.getState().isHigh())
-//                {
-//                    System.out.println("pin 07 was listened to for relay 6 is HIGH");
-//                    sendMes("pin7", "HIGH");
-//                    //sendMes("pin 7 was listened to for relay 6 is HIGH");
-//                }
-//                else
-//                {
-//                    System.out.println("pin 07 was listened to for relay 6 is LOW");
-//                    sendMes("pin7", "LOW");
-//                    //sendMes("pin 7 was listened to for relay 6 is LOW");
-//                }
-//            }
-//        });
-//
-//        pin08In.addListener(new GpioPinListenerDigital() {
-//            @Override
-//            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-//                if(event.getState().isHigh())
-//                {
-//                    System.out.println("pin08 was listened to for relay 8 is HIGH");
-//                    sendMes("pin8", "HIGH");
-//                    //sendMes("pin08 was listened to for relay 8 is HIGH");
-//                }
-//                else
-//                {
-//                    System.out.println("pin08 was listened to for relay 8 is LOW");
-//                    sendMes("pin8", "LOW");
-//                    //sendMes("pin08 was listened to for relay 8 is LOW");
-//                }
-//            }
-//        });
-//
-//        pin09In.addListener(new GpioPinListenerDigital() {
-//            @Override
-//            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-//                if(event.getState().isHigh())
-//                {
-//                    System.out.println("pin09 was listened to for relay 7 is HIGH");
-//                    sendMes("pin9", "HIGH");
-//                    //sendMes("pin09 was listened to for relay 7 is HIGH");
-//                }
-//                else
-//                {
-//                    System.out.println("pin09 was listened to for relay 7 is LOW");
-//                    sendMes("pin9", "LOW");
-//                    //sendMes("pin09 was listened to for relay 7 is LOW");
-//                }
-//            }
-//        });
-//
-//        pin12In.addListener(new GpioPinListenerDigital() {
-//            @Override
-//            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-//                if(event.getState().isHigh())
-//                {
-//                    System.out.println("pin12 was listened to for relay 2 is HIGH");
-//                    sendMes("pin12", "HIGH");
-//                    //sendMes("pin12 was listened to for relay 2 is HIGH");
-//                }
-//                else
-//                {
-//                    System.out.println("pin12 was listened to for relay 2 is LOW");
-//                    sendMes("pin12", "LOW");
-//                    //sendMes("pin12 was listened to for relay 2 is LOW");
-//                }
-//            }
-//        });
-//
-//        pin13In.addListener(new GpioPinListenerDigital() {
-//            @Override
-//            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-//                if(event.getState().isHigh())
-//                {
-//                    System.out.println("pin13 was listened to for relay 5 is HIGH");
-//                    sendMes("pin13", "HIGH");
-//                    //sendMes("pin13 was listened to for relay 5 is HIGH");
-//                }
-//                else
-//                {
-//                    System.out.println("pin13 was listened to for relay 5 is LOW");
-//                    sendMes("pin13", "LOW");
-//                    //sendMes("pin13 was listened to for relay 5 is LOW");
-//                }
-//            }
-//        });
-///*
-//        pin14In.addListener(new GpioPinListenerDigital() {
-//            @Override
-//            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-//                if(event.getState().isHigh())
-//                {
-//                    System.out.println("pin14 was listened to for relay 1 is HIGH");
-//                    sendMes("pin14", "HIGH");
-//                    //sendMes("pin14 was listened to for relay 1 is HIGH");
-//                }
-//                else
-//                {
-//                    System.out.println("pin14 was listened to for relay 1 is LOW");
-//                    sendMes("pin14", "LOW");
-//                    //sendMes("pin14 was listened to for relay 1 is LOW");
-//                }
-//            }
-//        });
-//*/
-//        pin22In.addListener(new GpioPinListenerDigital() {
-//            @Override
-//            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-//                if(event.getState().isHigh())
-//                {
-//                    System.out.println("pin22 was listened to for relay 4 is HIGH");
-//                    sendMes("pin22", "HIGH");
-//                    //sendMes("pin22 was listened to for relay 4 is HIGH");
-//                }
-//                else
-//                {
-//                    System.out.println("pin22 was listened to for relay 4 is LOW");
-//                    sendMes("pin22", "LOW");
-//                    //sendMes("pin22 was listened to for relay 4 is LOW");
-//                }
-//            }
-//        });
-//    }
+    public lightsContoller()
+    {
+
+
+
+        pin03In.setShutdownOptions(true);
+        pin07In.setShutdownOptions(true);
+        pin08In.setShutdownOptions(true);
+        pin09In.setShutdownOptions(true);
+        pin12In.setShutdownOptions(true);
+        pin13In.setShutdownOptions(true);
+//        pin14In.setShutdownOptions(true);
+        pin22In.setShutdownOptions(true);
+
+
+
+
+        pin03In.addListener(new GpioPinListenerDigital() {
+            @Override
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event){
+                if(event.getState().isHigh())
+                {
+                    System.out.println("pin 3 was listened to for relay 3 is HIGH");
+                    sendMes("pin3", "HIGH");
+                    //sendMes("pin 3 was listened to for relay 3 is HIGH");
+                }
+                else
+                {
+                    System.out.println("pin 3 was listened to for relay 3 is LOW");
+                    sendMes("pin3", "LOW");
+                    //sendMes("pin 3 was listened to for relay 3 is LOW");
+                }
+            }
+        });
+
+        pin07In.addListener(new GpioPinListenerDigital() {
+            @Override
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
+                if(event.getState().isHigh())
+                {
+                    System.out.println("pin 07 was listened to for relay 6 is HIGH");
+                    sendMes("pin7", "HIGH");
+                    //sendMes("pin 7 was listened to for relay 6 is HIGH");
+                }
+                else
+                {
+                    System.out.println("pin 07 was listened to for relay 6 is LOW");
+                    sendMes("pin7", "LOW");
+                    //sendMes("pin 7 was listened to for relay 6 is LOW");
+                }
+            }
+        });
+
+        pin08In.addListener(new GpioPinListenerDigital() {
+            @Override
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
+                if(event.getState().isHigh())
+                {
+                    System.out.println("pin08 was listened to for relay 8 is HIGH");
+                    sendMes("pin8", "HIGH");
+                    //sendMes("pin08 was listened to for relay 8 is HIGH");
+                }
+                else
+                {
+                    System.out.println("pin08 was listened to for relay 8 is LOW");
+                    sendMes("pin8", "LOW");
+                    //sendMes("pin08 was listened to for relay 8 is LOW");
+                }
+            }
+        });
+
+        pin09In.addListener(new GpioPinListenerDigital() {
+            @Override
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
+                if(event.getState().isHigh())
+                {
+                    System.out.println("pin09 was listened to for relay 7 is HIGH");
+                    sendMes("pin9", "HIGH");
+                    //sendMes("pin09 was listened to for relay 7 is HIGH");
+                }
+                else
+                {
+                    System.out.println("pin09 was listened to for relay 7 is LOW");
+                    sendMes("pin9", "LOW");
+                    //sendMes("pin09 was listened to for relay 7 is LOW");
+                }
+            }
+        });
+
+        pin12In.addListener(new GpioPinListenerDigital() {
+            @Override
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
+                if(event.getState().isHigh())
+                {
+                    System.out.println("pin12 was listened to for relay 2 is HIGH");
+                    sendMes("pin12", "HIGH");
+                    //sendMes("pin12 was listened to for relay 2 is HIGH");
+                }
+                else
+                {
+                    System.out.println("pin12 was listened to for relay 2 is LOW");
+                    sendMes("pin12", "LOW");
+                    //sendMes("pin12 was listened to for relay 2 is LOW");
+                }
+            }
+        });
+
+        pin13In.addListener(new GpioPinListenerDigital() {
+            @Override
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
+                if(event.getState().isHigh())
+                {
+                    System.out.println("pin13 was listened to for relay 5 is HIGH");
+                    sendMes("pin13", "HIGH");
+                    //sendMes("pin13 was listened to for relay 5 is HIGH");
+                }
+                else
+                {
+                    System.out.println("pin13 was listened to for relay 5 is LOW");
+                    sendMes("pin13", "LOW");
+                    //sendMes("pin13 was listened to for relay 5 is LOW");
+                }
+            }
+        });
+/*
+        pin14In.addListener(new GpioPinListenerDigital() {
+            @Override
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
+                if(event.getState().isHigh())
+                {
+                    System.out.println("pin14 was listened to for relay 1 is HIGH");
+                    sendMes("pin14", "HIGH");
+                    //sendMes("pin14 was listened to for relay 1 is HIGH");
+                }
+                else
+                {
+                    System.out.println("pin14 was listened to for relay 1 is LOW");
+                    sendMes("pin14", "LOW");
+                    //sendMes("pin14 was listened to for relay 1 is LOW");
+                }
+            }
+        });
+*/
+        pin22In.addListener(new GpioPinListenerDigital() {
+            @Override
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
+                if(event.getState().isHigh())
+                {
+                    System.out.println("pin22 was listened to for relay 4 is HIGH");
+                    sendMes("pin22", "HIGH");
+                    //sendMes("pin22 was listened to for relay 4 is HIGH");
+                }
+                else
+                {
+                    System.out.println("pin22 was listened to for relay 4 is LOW");
+                    sendMes("pin22", "LOW");
+                    //sendMes("pin22 was listened to for relay 4 is LOW");
+                }
+            }
+        });
+    }
 
 
 
@@ -363,21 +363,21 @@ public class lightsContoller {
 */                System.out.println("pin 13 for relay 5 has a state of: " + pinState);
                 break;
             case 14:
-//                if(pin14 == null)
-//                {
-//                    GpioController gpioOUT = GpioFactory.getInstance();
-//                    pin14 = gpioOUT.provisionDigitalOutputPin(RaspiPin.GPIO_14, "Gpio14", PinState.LOW);
-//                }
-///*                if(pin14.getState() == PinState.HIGH)
-//                {
-//                    pin14.setState(PinState.LOW);
-//                }
-//                else
-//                {
-//                    pin14.setState(PinState.HIGH);
-//                }
-//*/              pin14.toggle();
-//                pinState = pin14.getState().toString();
+                if(pin14 == null)
+                {
+                    GpioController gpioOUT = GpioFactory.getInstance();
+                    pin14 = gpioOUT.provisionDigitalOutputPin(RaspiPin.GPIO_14, "Gpio14", PinState.LOW);
+                }
+/*                if(pin14.getState() == PinState.HIGH)
+                {
+                    pin14.setState(PinState.LOW);
+                }
+                else
+                {
+                    pin14.setState(PinState.HIGH);
+                }
+*/              pin14.toggle();
+                pinState = pin14.getState().toString();
                 System.out.println("pin 14 for relay 1 has a state of: " + pinState);
                 break;
             /*
@@ -731,12 +731,12 @@ public class lightsContoller {
 */                System.out.println("pin 13 for relay 5 has a state of: " + pinState);
                 break;
             case 14:
-//                if(pin14 == null)
-//                {
-//                    GpioController gpio = GpioFactory.getInstance();
-//                    pin14 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_14, "Gpio14", PinState.LOW);
-//                }
-//                pinState = pin14.getState().toString();
+                if(pin14 == null)
+                {
+                    GpioController gpio = GpioFactory.getInstance();
+                    pin14 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_14, "Gpio14", PinState.LOW);
+                }
+                pinState = pin14.getState().toString();
                 System.out.println("pin 14 for relay 1 has a state of: " + pinState);
                 break;
             /*
