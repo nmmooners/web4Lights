@@ -243,6 +243,7 @@ public class twitter {
         try
         {
             input = new FileInputStream("src/main/resources/twitterAccount.properties");
+            //input = new FileInputStream("twitterAccount.properties");
             prop.load(input);
             mooreLightsConsumerKey = prop.getProperty("consumerKey").toString();
             mooreLightsConsumerKeySecret = prop.getProperty("consumerKeySecret").toString();
